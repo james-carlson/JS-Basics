@@ -87,7 +87,7 @@ function welcome(name) {
 
 //Now alert the result of invoking newMyName
 
-alert.newMyName();
+alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -97,19 +97,17 @@ alert.newMyName();
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-function outerFn(name) {
-  return function() {return "James"};
+function outerFn() {
+  return function() { 
+    return "James";
+  }
 }
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
-// var innerFn = function() { 
-//   outerFn();
-// };
+//Code Here
+var innerFn = outerFn();
 
-function innerFn() {
-  return "James"
-}
 
 //Now invoke innerFn.
 innerFn();
